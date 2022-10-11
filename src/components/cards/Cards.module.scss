@@ -1,0 +1,78 @@
+@import "../../styles/global.scss";
+
+.cardContainer {
+  width: 150px;
+  height: 250px;
+  background-color: $fire;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  margin: 0 0 5px;
+  cursor: pointer;
+  .pokeId {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0;
+    span {
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      font-family: Impact;
+    }
+  }
+  .pokeImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .pokeName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-family: Impact;
+    }
+  }
+  .pokeType {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .pokeTypeImg {
+      background: #fba54c;
+      box-shadow: 0 0 20px #fba54c;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        filter: saturate(200%);
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      &:nth-of-type(2) {
+        background: #a1bbec;
+        box-shadow: 0 0 20px #a1bbec;
+      }
+      &:nth-of-type(3) {
+        background: #0c69c8;
+        box-shadow: 0 0 20px #0c69c8;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

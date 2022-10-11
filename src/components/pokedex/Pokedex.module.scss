@@ -1,0 +1,19 @@
+@import "../../styles/global.scss";
+
+.pokedexContainer {
+  width: 90%;
+  margin: auto;
+  padding: 100px 0;
+  display: flex;
+  .leftContainer, .rightContainer {
+    flex-basis: 50%;
+  }
+  .leftContainer {
+    border: 1px red solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 0.5fr));
+  }
+  .btnGrp {
+    display: flex;
+  }
+}
