@@ -39,7 +39,9 @@ const Pokedex = () => {
   }, [url]);
   return (
     <>
+    
     <div className={styles.pokedexContainer}>
+  
       <div className={styles.leftContainer}>
         <Cards pokemon={pokeData} loading={loading} infoPokemon={(poke: any)=>setPokeDex(poke)} />
         <div className={styles.btnGrp}>
@@ -51,6 +53,9 @@ const Pokedex = () => {
               setPokeData([])
               setUrl(nextUrl);
             }}>Next</button>}
+        </div>
+        <div className={styles.inputFilter}>
+          <input type="text" placeholder="Enter Name" />
         </div>
       </div>
       <div className={styles.rightContainer}>

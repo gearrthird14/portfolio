@@ -12,28 +12,35 @@
   .leftContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
-  }
-  .btnGrp {
-    display: flex;
-    width: 300px;
-    button {
-      width: 150px;
-      height: 30px;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      box-sizing: border-box;
-      margin: 16px;
-      font-size: 17px;
-      font-weight: bold;
-      color: white;
-      background-color: #b74555;
-      border-radius: 8px;
+    .btnGrp {
+      display: flex;
+      width: 300px;
+      button {
+        width: 150px;
+        height: 30px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+        margin: 16px;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+        background-color: #b74555;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .inputFilter {
       display: flex;
       align-items: center;
-      justify-content: center;
+      margin: 0 0 0 150px;
     }
   }
+  
+
   .rightContainer {
     display: flex;
     flex-direction: column;
@@ -52,7 +59,7 @@
     letter-spacing: 1px;
   }
   .rightContainer img{
-    margin: 1.5rem;
+    margin: 24px;
     height: 160px;
   }
 }
