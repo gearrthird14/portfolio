@@ -5,15 +5,54 @@
   margin: auto;
   padding: 100px 0;
   display: flex;
-  .leftContainer, .rightContainer {
+  .leftContainer,
+  .rightContainer {
     flex-basis: 50%;
   }
   .leftContainer {
-    border: 1px red solid;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px, 0.5fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
   }
   .btnGrp {
     display: flex;
+    width: 300px;
+    button {
+      width: 150px;
+      height: 30px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      box-sizing: border-box;
+      margin: 16px;
+      font-size: 17px;
+      font-weight: bold;
+      color: white;
+      background-color: #b74555;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1015px;
+    position: fixed;
+    width: 50%;
+    text-align: left;
+    color: black;
+    top:100px;
+    right: 10px;
+  }
+  .rightContainer h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .rightContainer img{
+    margin: 1.5rem;
+    height: 160px;
   }
 }

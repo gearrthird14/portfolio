@@ -1,0 +1,18 @@
+.abilities {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  .group {
+    background-color: #b74555;
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 8px;
+    margin: 0 0 0 16px;
+  }
+}
+.base-stat {
+  margin: 32px 0 0;
+}
