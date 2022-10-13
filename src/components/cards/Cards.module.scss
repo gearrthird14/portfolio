@@ -1,7 +1,7 @@
 @import "../../styles/global.scss";
 
 .cardContainer {
-  width: 150px;
+  width: 170px;
   height: 250px;
   background-color: $fire;
   border-radius: 10px;
@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   box-sizing: border-box;
-  margin: 0 0 5px;
   cursor: pointer;
   .pokeId {
     display: flex;
@@ -40,6 +39,9 @@
       font-weight: 400;
       letter-spacing: 1px;
       font-family: Impact;
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
   }
   .pokeType {
@@ -75,4 +77,10 @@
       }
     }
   }
+}
+.Loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

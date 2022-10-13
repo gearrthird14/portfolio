@@ -8,7 +8,7 @@ import styles from "./Pokedex.module.scss";
 
 
 const Pokedex = () => {
-  const [pokeData, setPokeData] = useState<Object>([]);
+  const [pokeData, setPokeData] = useState([]);
   const [loading, setLoading] = useState<Boolean>(true);
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/");
   const [nextUrl, setNextUrl] = useState();
@@ -28,7 +28,7 @@ const Pokedex = () => {
     res.map(async (item: any) => {
       const result = await axios.get(item.url);
       setPokeData((currentList: any) => {
-        currentList = [...currentList, result.data].sort((a: any, b: any) => a.id - b.id );
+        currentList = [...currentList, result.data].sort((a: any, b: any) => a.id - b.id);
         return currentList;
       });
     });
@@ -55,7 +55,7 @@ const Pokedex = () => {
             }}>Next</button>}
         </div>
         <div className={styles.inputFilter}>
-          <input type="text" placeholder="Enter Name" />
+          <input type="text" placeholder="Enter Name" maxLength={20}/>
         </div>
       </div>
       <div className={styles.rightContainer}>

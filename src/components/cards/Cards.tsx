@@ -1,9 +1,11 @@
 import React from "react";
-import fire from "../../assets/fire.svg";
-import flying from "../../assets/flying.svg";
-import dragon from "../../assets/dragon.svg";
 // Styles
 import styles from "./Cards.module.scss";
+
+const svgImageHandler = (item: string) => {
+  const svgImage = require(`../../assets/${item}.svg`);
+  return svgImage;
+};
 
 const Cards = ({ pokemon, loading, infoPokemon }: any) => {
   const isIdHandler = (num: string, length: number) => {
@@ -13,12 +15,15 @@ const Cards = ({ pokemon, loading, infoPokemon }: any) => {
   return (
     <>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1 className={styles.Loader}>Loading...</h1>
       ) : (
-        pokemon.map((item: any, index: any) => {
+        pokemon.map((item: any) => {
           return (
-            <section key={index}>
-              <div className={styles.cardContainer} onClick={()=>infoPokemon(item)}>
+            <section key={item.id}>
+              <div
+                className={styles.cardContainer}
+                onClick={() => infoPokemon(item)}
+              >
                 <div className={styles.pokeId}>
                   <span>#{isIdHandler(`${item.id}`, 3)}</span>
                 </div>
@@ -31,17 +36,13 @@ const Cards = ({ pokemon, loading, infoPokemon }: any) => {
                 <div className={styles.pokeName}>
                   <span>{item.name}</span>
                 </div>
-                <div className={styles.pokeType}>
-                  <div className={styles.pokeTypeImg}>
-                    <img src={fire} alt="" />
+                  <div className={styles.pokeType}>
+                {item.types.map((item: any) => (
+                    <div className={styles.pokeTypeImg}>
+                      <img src={svgImageHandler(item.type.name)} alt="" />
+                    </div>
+                ))}
                   </div>
-                  <div className={styles.pokeTypeImg}>
-                    <img src={flying} alt="" />
-                  </div>
-                  <div className={styles.pokeTypeImg}>
-                    <img src={dragon} alt="" />
-                  </div>
-                </div>
               </div>
             </section>
           );

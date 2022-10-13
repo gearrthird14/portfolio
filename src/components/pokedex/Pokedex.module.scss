@@ -12,6 +12,8 @@
   .leftContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
+    min-width: 867px;
+    min-height: 1084px;
     .btnGrp {
       display: flex;
       width: 300px;
@@ -39,8 +41,6 @@
       margin: 0 0 0 150px;
     }
   }
-  
-
   .rightContainer {
     display: flex;
     flex-direction: column;
